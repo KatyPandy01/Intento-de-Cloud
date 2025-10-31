@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Manualidades</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            color: #f3e8ff;
+            font-size: 1.2em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(124, 58, 237, 0.4);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: #7c3aed;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            color: #6d28d9;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7c3aed;
+        }
+
+        .add-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(124, 58, 237, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .add-button:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Mis Manualidades ✨</h1>
+            <p class="subtitle">Creaciones hechas con amor y dedicación</p>
+        </header>
+
+        <div class="gallery">
+            <div class="card">
+                <div class="card-image">🎨</div>
+                <div class="card-content">
+                    <h2 class="card-title">Proyecto 1</h2>
+                    <p class="card-description">Descripción de tu primera creación. Aquí puedes contar sobre los materiales usados y la inspiración detrás del proyecto.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">🧶</div>
+                <div class="card-content">
+                    <h2 class="card-title">Proyecto 2</h2>
+                    <p class="card-description">Una hermosa manualidad que refleja tu creatividad. Comparte los detalles especiales que hacen única esta creación.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">✂️</div>
+                <div class="card-content">
+                    <h2 class="card-title">Proyecto 3</h2>
+                    <p class="card-description">Cada proyecto cuenta una historia. Describe qué hace especial a esta manualidad y el proceso creativo.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">🎀</div>
+                <div class="card-content">
+                    <h2 class="card-title">Proyecto 4</h2>
+                    <p class="card-description">Otra maravillosa creación de tu colección. Comparte los detalles que la hacen única y especial.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">🌸</div>
+                <div class="card-content">
+                    <h2 class="card-title">Proyecto 5</h2>
+                    <p class="card-description">Una pieza más de tu arte. Explica la técnica utilizada y lo que te inspiró a crearla.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">💝</div>
+                <div class="card-content">
+                    <h2 class="card-title">Proyecto 6</h2>
+                    <p class="card-description">Tu creatividad no tiene límites. Describe esta hermosa manualidad y lo que representa para ti.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-button" title="Agregar nueva manualidad">+</div>
+
+        <footer>
+            <p>© 2025 - Hecho con 💜 y mucha creatividad</p>
+        </footer>
+    </div>
+</body>
+</html>
